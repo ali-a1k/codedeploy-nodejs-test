@@ -15,4 +15,5 @@ jobs:
       - name: Run shell commands
         run: |
           echo "Assuming role in Account B..."
+          ls -la
           aws s3 cp plan.txt s3://tcw-thecloudworld-codebuild --recursive
