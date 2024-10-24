@@ -6,10 +6,6 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-env:
-    TARGET_ROLE_ARN: "arn:aws:iam::925935005908:role/cross-account-codebuild"
-    TARGET_AWS_REGION: "us-east-1"
-
 jobs:
   build:
     runs-on: 
@@ -18,6 +14,5 @@ jobs:
       - name: Run shell commands
         run: |
           echo "Assuming role in Account B..."
-          pip install awscli
           echo "Deploying to Account B..." > test.txt
           aws s3 cp test.txt s3://tcw-thecloudworld-codebuild --recursive
