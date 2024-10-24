@@ -16,4 +16,4 @@ jobs:
         run: |
           echo "Assuming role in Account B..."
           ls -la
-          aws s3 ls s3://tcw-gh-actions-artifact
+          aws s3 ls s3://tcw-thecloudworld-codebuild
